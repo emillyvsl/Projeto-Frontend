@@ -22,8 +22,17 @@ p,li{
   text-align: center;
   font-size: 40px;
   text-decoration: un;
+  position: relative;
   }
-#about-title{
+.main-title::after{
+  content: "";
+  border-top: 2px solid #212121;
+  width: 15%;
+  position: absolute;
+  top: 60px;
+  left: 42.5%;
+}
+.title-uppercase{
   color:#212121 ;
   text-transform: uppercase;
   padding-bottom: 30px;
@@ -62,4 +71,42 @@ p,li{
 }
 .service-box i,.service-box h3{
   transition: 1s;
+}
+/* Team */
+#team-area{
+  margin-bottom: 65px;
+}
+
+/* Trabalhe conosco */
+#aplly-area{
+  height: 500px;
+}
+#aplly-area .row,#aplly-img{
+  height: 100%;
+}
+#aplly-img{
+  background-image: url('img/empresa.jpg');
+  background-size: cover;
+}
+#aplly-content{
+  background-color: #212121;
+
+
+}
+#aplly-content p,#aplly-content h4{
+  color: white;
+}
+#aplly-content h4{
+  margin-top: 15%;
+}
+#botton-content{
+  background-color: white;
+  color: #212121;
+  border-radius: 25px;
+  padding: 10px;
+  transition: 1s;
+}
+#botton-content:hover{
+  background-color: #035b7a;
+  color: white;
 }
