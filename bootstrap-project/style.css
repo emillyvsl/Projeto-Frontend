@@ -27,10 +27,10 @@ p,li{
 .main-title::after{
   content: "";
   border-top: 2px solid #212121;
-  width: 15%;
+  width: 10%;
   position: absolute;
   top: 60px;
-  left: 42.5%;
+  left: 45.5%;
 }
 .title-uppercase{
   color:#212121 ;
@@ -45,7 +45,7 @@ p,li{
 }
 #about-list li i{
   margin-right: 14px;
-  color: #00447c;
+  color: #035b7a;
 }
 #about-list li{
   line-height: 30px;
@@ -72,9 +72,27 @@ p,li{
 .service-box i,.service-box h3{
   transition: 1s;
 }
+/* Data area */
+/* #circleA {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+#data-area{
+  background-color: #eaeaea;
+} */
+
 /* Team */
 #team-area{
   margin-bottom: 65px;
+}
+.team-img{
+  transition: 1s;
+  filter: grayscale(100%);
+}.team-img:hover{
+  transform: scale(1.2);
+  filter: grayscale(0%);
 }
 
 /* Trabalhe conosco */
@@ -94,19 +112,34 @@ p,li{
 
 }
 #aplly-content p,#aplly-content h4{
-  color: white;
+  color: #eaeaea;
 }
 #aplly-content h4{
   margin-top: 15%;
 }
 #botton-content{
-  background-color: white;
-  color: #212121;
+  background-color: transparent;
+  color: #eaeaea;
   border-radius: 25px;
-  padding: 10px;
+  padding: 10px 20px;
   transition: 1s;
+  margin-top: 25px;
+  border: 2px solid #eaeaea;
 }
 #botton-content:hover{
   background-color: #035b7a;
-  color: white;
+  color: #eaeaea;
+}
+.parallax {
+  /* The image used */
+  background-image: url('img/cidadeparallax.png');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
