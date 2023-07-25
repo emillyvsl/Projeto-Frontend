@@ -93,9 +93,9 @@ p,li{
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* #data-area .row{
+#data-area .row{
   padding: 10em 0;
-} */
+}
 
 
 /* Team */
@@ -111,26 +111,26 @@ p,li{
 }
 
 /* Trabalhe conosco */
-#aplly-area{
+#apply-area{
   height: 500px;
 }
-#aplly-area .row,#aplly-img{
+#apply-area .row,#apply-img,#aplly-area{
   height: 100%;
 }
-#aplly-img{
+#apply-img{
   background-image: url('img/empresa.jpg');
   background-size: cover;
 }
-#aplly-content{
+#apply-content{
   background-color: #212121;
 
 
 }
-#aplly-content p,#aplly-content h4{
+#apply-content p,#apply-content h4{
   color: #eaeaea;
 }
-#aplly-content h4{
-  margin-top: 15%;
+#apply-content h4{
+  margin-top: 10%;
 }
 #botton-content{
   background-color: transparent;
@@ -146,15 +146,41 @@ p,li{
   color: #eaeaea;
 }
 .parallax {
-  /* The image used */
   background-image: url('img/pattern.png');
-
-  /* Full height */
   height: 100%; 
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* project */
+.btn-project{
+  background-color: transparent;
+  color: #212121;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: 1s;
+  margin-top: 25px;
+  border: 2px solid #212121;
+  margin-bottom: 5em;
+
+}
+.project-img{
+  margin-bottom: 30px;
+
+}
+.col-no-margin-right {
+        margin-right: 0;
+    }
+
+    .col-no-margin-left {
+        margin-left: 0;
+    }
+
+
+/* .project-img img{
+  height: 15em;
+  width: 20em;
+} */
+
