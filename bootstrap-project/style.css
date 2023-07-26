@@ -17,10 +17,23 @@ li {
   color: #212121;
   font-size: 15px;
 }
+/* Header */
+#nav-conteiner{
+  padding: 0;
+
+}
+header nav {
+  height: 10vh;
+}
+header img{
+  height: 8vh;
+}
 /* Carousel */
 
 #carousel-area .carousel-inner,#carousel-area .carousel-item{
-  height: 90vh;
+  max-height: 80vh;
+  min-height: 20vh;
+  margin-top: 29px;
 }
 #carousel-area .carousel-caption{
   top:30%;
