@@ -12,7 +12,7 @@ let containerA = new ProgressBar.Circle(circleA, {
   from: { color: '#0c0c0c', width: 1 },
   to: { color: '#0b7b9e', width: 4 },
 
-  step: function(state, circle) {
+  step: function (state, circle) {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
 
@@ -39,7 +39,7 @@ let containerB = new ProgressBar.Circle(circleB, {
   from: { color: '#0c0c0c', width: 1 },
   to: { color: '#0b7b9e', width: 4 },
 
-  step: function(state, circle) {
+  step: function (state, circle) {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
 
@@ -66,7 +66,7 @@ let containerC = new ProgressBar.Circle(circleC, {
   from: { color: '#0c0c0c', width: 1 },
   to: { color: '#0b7b9e', width: 4 },
 
-  step: function(state, circle) {
+  step: function (state, circle) {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
 
@@ -93,7 +93,7 @@ let containerD = new ProgressBar.Circle(circleD, {
   from: { color: '#0c0c0c', width: 1 },
   to: { color: '#0b7b9e', width: 4 },
 
-  step: function(state, circle) {
+  step: function (state, circle) {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
 
@@ -126,24 +126,24 @@ containerD.text.style.fontSize = '2rem';
 // containerD.animate(1.0);  
 
 let dataAreaOffset = $('#data-area').offset();
-    let stop = 0;
+let stop = 0;
 
-    $(window).scroll(function(e){
+$(window).scroll(function (e) {
 
-        let scroll = $(window).scrollTop();
+  let scroll = $(window).scrollTop();
 
-        if(scroll > (dataAreaOffset.top - 500) && stop == 0){
+  if (scroll > (dataAreaOffset.top - 500) && stop == 0) {
 
-          containerA.animate(1.0); 
-          containerB.animate(1.0);
-          containerC.animate(1.0); 
-          containerD.animate(1.0);  
+    containerA.animate(1.0);
+    containerB.animate(1.0);
+    containerC.animate(1.0);
+    containerD.animate(1.0);
 
-            stop = 1;
+    stop = 1;
 
-        }
+  }
 
-    });
+});
 
 
 
@@ -158,7 +158,7 @@ let dataAreaOffset = $('#data-area').offset();
 // Filtros botoes
 
 
-$('.filter-btn').on('click', function() {
+$('.filter-btn').on('click', function () {
 
   let type = $(this).attr('id');
   let boxes = $('.project-box');
@@ -166,68 +166,30 @@ $('.filter-btn').on('click', function() {
   $('.main-btn').removeClass('active');
   $(this).addClass('active');
 
-  if(type == 'dsg-btn') {
-      eachBoxes('dsg', boxes)
-  } else if(type == 'dev-btn') {
-      eachBoxes('dev', boxes);
-  } else if(type == 'seo-btn') {
-      eachBoxes('seo', boxes);
+  if (type == 'dsg-btn') {
+    mostrarBoxes('dsg', boxes)
+  } else if (type == 'dev-btn') {
+    mostrarBoxes('dev', boxes);
+  } else if (type == 'seo-btn') {
+    mostrarBoxes('seo', boxes);
   } else {
-      eachBoxes('all', boxes);
+    mostrarBoxes('all', boxes);
   }
 
 });
 
-function eachBoxes(type, boxes) {
+function mostrarBoxes(type, boxes) {
 
-  if(type == 'all') {
-      $(boxes).fadeIn();
+  if (type == 'all') {
+    $(boxes).fadeIn();
   } else {
-      $(boxes).each(function() {
-          if(!$(this).hasClass(type)) {
-              $(this).fadeOut('slow');
-          } else {
-              $(this).fadeIn();
-          }
-      });
+    $(boxes).each(function () {
+      if (!$(this).hasClass(type)) {
+        $(this).fadeOut('slow');
+      } else {
+        $(this).fadeIn();
+      }
+    });
   }
 }
-
-//Scroll para seções
-let navBtn = $('.nav-item');
-
-let bannerSection = $('#mainSlider');
-let aboutSection = $('#about-area');
-let servicesSection = $('#services-area');
-let teamSection = $('#team-area');
-let portfolioSection = $('#portfolio-area');
-let contactSection = $('#contact-area');
-
-let scrollTo = '';
-
-$(navBtn).click(function(){
-
-  let btnId = $(this).attr('id');
-
-  console.log(btnId);
-
-  if(btnId == 'about-menu'){
-      scrollTo = aboutSection;
-  } else if(btnId == 'services-menu'){
-      scrollTo = servicesSection;
-  } else if(btnId == 'team-menu'){
-      scrollTo = teamSection;
-  } else if(btnId == 'portfolio-menu'){
-      scrollTo = portfolioSection;
-  } else if(btnId == 'contact-menu'){
-      scrollTo = contactSection;
-  } else {
-      scrollTo = bannerSection;
-  }
-
-  $([document.documentElement, document.body]).animate({
-      scrollTop: $(scrollTo).offset().top - 70
-  }, 1500);
-
-});
 
