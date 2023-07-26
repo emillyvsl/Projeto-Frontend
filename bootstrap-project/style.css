@@ -17,6 +17,18 @@ li {
   color: #212121;
   font-size: 15px;
 }
+/* Carousel */
+
+#carousel-area .carousel-inner,#carousel-area .carousel-item{
+  height: 90vh;
+}
+#carousel-area .carousel-caption{
+  top:30%;
+}
+#carousel-area .carousel-caption p{
+  font-size: larger;
+  color: #f2f3f4;
+}
 
 
 /* sobre */
@@ -227,7 +239,7 @@ li {
 
 #news-area {
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #f2f3f4;
 }
 
 #news-area p {
